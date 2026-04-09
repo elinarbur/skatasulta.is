@@ -33,6 +33,8 @@ COPY . .
 # Ensure /public exists so COPY never fails
 RUN mkdir -p /app/public
 
+RUN npx payload generate:importmap
+
 RUN \
   if [ -f yarn.lock ]; then yarn run build; \
   elif [ -f package-lock.json ]; then npm run build; \
