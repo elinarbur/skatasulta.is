@@ -4,6 +4,8 @@ import { Header } from "components/header";
 import { notFound } from "next/navigation";
 import { convertLexicalToHTML } from "@payloadcms/richtext-lexical/html";
 
+export const dynamic = "force-dynamic";
+
 export default async function License() {
     const payloadConfig = await config;
     const payload = await getPayload({ config: payloadConfig });
