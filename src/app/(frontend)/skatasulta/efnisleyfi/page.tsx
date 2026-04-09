@@ -14,7 +14,7 @@ export default async function License() {
     const license = await payload.findGlobal({ slug: "license" });
 
     if (!license) {
-        return <div>Eitthvað er ekki að virka sem skyldi :/</div>;
+        return notFound();
     }
 
     return (
