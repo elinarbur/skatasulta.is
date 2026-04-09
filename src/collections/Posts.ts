@@ -143,6 +143,7 @@ export const Posts: CollectionConfig = {
                     "Dagsetning sem greinin er birt. Ef ekkert er fyllt inn sést greinin ekki.",
                 date: { pickerAppearance: "dayAndTime" },
             },
+            defaultValue: () => new Date().toISOString(),
         },
         {
             label: "Styttri vefslóð",
@@ -221,19 +222,19 @@ export const Posts: CollectionConfig = {
                 },
                 {
                     label: "Blár",
-                    value: "red",
+                    value: "blue",
                 },
                 {
                     label: "Grænn",
-                    value: "red",
+                    value: "green",
                 },
                 {
                     label: "Gulur",
-                    value: "red",
+                    value: "yellow",
                 },
                 {
                     label: "Svartur",
-                    value: "red",
+                    value: "black",
                 },
             ],
         },
@@ -261,6 +262,7 @@ export const Posts: CollectionConfig = {
                             "Dagsetning sem brotið er birt. Ef ekkert er fyllt inn sést greinin ekki.",
                         date: { pickerAppearance: "dayAndTime" },
                     },
+                    defaultValue: () => new Date().toISOString(),
                 },
                 {
                     label: "Titill/fyrirsögn",

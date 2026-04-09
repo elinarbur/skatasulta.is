@@ -115,7 +115,17 @@ export default async function Home() {
 
                                 <div className="md:w-1/2">
                                     <div className="pb-6">
-                                        <div className="h-2 w-full max-w-[100px] bg-blue-500" />
+                                        <div
+                                            className={cn(
+                                                "h-2 w-full max-w-[100px]",
+                                                post.bannerColour === "red" && "bg-red-500",
+                                                post.bannerColour === "blue" && "bg-blue-500",
+                                                post.bannerColour === "green" && "bg-green-500",
+                                                post.bannerColour === "yellow" && "bg-blue-400",
+                                                post.bannerColour === "black" && "bg-black",
+                                                !post.bannerColour && "bg-gray-500",
+                                            )}
+                                        />
                                     </div>
 
                                     <h1 className="text-3xl leading-10 font-extrabold uppercase transition duration-300 ease-in-out group-hover:text-blue-500 md:text-5xl md:leading-14">

@@ -15,20 +15,20 @@
         "start": "cross-env NODE_OPTIONS=--no-deprecation next start"
     },
     "dependencies": {
-        "@payloadcms/db-sqlite": "3.31.0",
-        "@payloadcms/next": "3.31.0",
-        "@payloadcms/payload-cloud": "3.31.0",
-        "@payloadcms/richtext-lexical": "3.31.0",
+        "@payloadcms/db-postgres": "3.82.0",
+        "@payloadcms/next": "3.82.0",
+        "@payloadcms/payload-cloud": "3.82.0",
+        "@payloadcms/richtext-lexical": "3.82.0",
         "@tailwindcss/postcss": "^4.1.0",
         "clsx": "^2.1.1",
         "cross-env": "^7.0.3",
         "date-fns": "^4.1.0",
         "graphql": "^16.8.1",
         "lucide-react": "^0.486.0",
-        "next": "15.2.3",
-        "payload": "3.31.0",
+        "next": "16.2.3",
+        "payload": "3.82.0",
         "postcss": "^8.5.3",
-        "react": "19.0.0",
+        "react": "19.2.5",
         "react-dom": "19.0.0",
         "sharp": "0.32.6",
         "tailwind-merge": "^3.1.0",
@@ -48,7 +48,7 @@
     },
     "engines": {
         "node": "^18.20.2 || >=20.9.0",
-        "pnpm": "^9"
+        "pnpm": "^10"
     },
     "pnpm": {
         "onlyBuiltDependencies": [

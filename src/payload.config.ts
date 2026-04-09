@@ -1,5 +1,5 @@
 // storage-adapter-import-placeholder
-import { sqliteAdapter } from "@payloadcms/db-sqlite";
+import { postgresAdapter } from "@payloadcms/db-postgres";
 import {
     FixedToolbarFeature,
     InlineToolbarFeature,
@@ -45,11 +45,7 @@ export default buildConfig({
     typescript: {
         outputFile: path.resolve(dirname, "payload-types.ts"),
     },
-    db: sqliteAdapter({
-        client: {
-            url: process.env.DATABASE_URI || "",
-        },
-    }),
+    db: postgresAdapter({ pool: { connectionString: process.env.DATABASE_URI } }),
     sharp,
     plugins: [],
 });

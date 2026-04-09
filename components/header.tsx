@@ -38,24 +38,26 @@ export function Header({
             >
                 <div className="w-full">
                     <div className="mx-auto max-w-[1920px] px-8">
-                        <Link href="/" className="flex items-center gap-2">
-                            {!startsScrolled && logo.urlDark && (
-                                <Image
-                                    src={logo.urlDark}
-                                    alt="Merki Skátasultunnar"
-                                    width={220}
-                                    height={36}
-                                />
-                            )}
-                            {startsScrolled && logo.urlLight && (
-                                <Image
-                                    src={logo.urlLight}
-                                    alt="Merki Skátasultunnar"
-                                    width={220}
-                                    height={36}
-                                />
-                            )}
-                        </Link>
+                        <div className="w-full">
+                            <Link href="/" className="inline-block">
+                                {!startsScrolled && logo.urlDark && (
+                                    <Image
+                                        src={logo.urlDark}
+                                        alt="Merki Skátasultunnar"
+                                        width={220}
+                                        height={36}
+                                    />
+                                )}
+                                {startsScrolled && logo.urlLight && (
+                                    <Image
+                                        src={logo.urlLight}
+                                        alt="Merki Skátasultunnar"
+                                        width={220}
+                                        height={36}
+                                    />
+                                )}
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </header>
@@ -70,16 +72,18 @@ export function Header({
             >
                 <div className="w-full">
                     <div className="mx-auto max-w-[1920px] px-8">
-                        <Link href="/" className="flex items-center gap-2">
-                            {logo.urlLight && (
-                                <Image
-                                    src={logo.urlLight}
-                                    alt="Merki Skátasultunnar"
-                                    width={220}
-                                    height={36}
-                                />
-                            )}
-                        </Link>
+                        <div className="w-full">
+                            <Link href="/" className="inline-block">
+                                {logo.urlLight && (
+                                    <Image
+                                        src={logo.urlLight}
+                                        alt="Merki Skátasultunnar"
+                                        width={220}
+                                        height={36}
+                                    />
+                                )}
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </div>
