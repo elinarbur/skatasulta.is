@@ -30,6 +30,9 @@ COPY . .
 # Uncomment the following line in case you want to disable telemetry during the build.
 # ENV NEXT_TELEMETRY_DISABLED 1
 
+# Ensure /public exists so COPY never fails
+RUN mkdir -p /app/public
+
 RUN \
   if [ -f yarn.lock ]; then yarn run build; \
   elif [ -f package-lock.json ]; then npm run build; \
@@ -47,9 +50,6 @@ ENV NODE_ENV production
 
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
-
-# Ensure /public exists so COPY never fails
-RUN mkdir -p /app/public
 
 COPY --from=builder /app/public ./public
 
