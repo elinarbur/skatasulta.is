@@ -128,7 +128,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
                 {adverts.articleBannerTop &&
                     typeof adverts.articleBannerTop !== "number" &&
                     typeof adverts.articleBannerTop.url === "string" && (
-                        <div className="mx-auto max-w-screen-md px-8 py-16">
+                        <div className="mx-auto max-w-screen-md px-8 pt-16">
                             <div className="flex justify-center">
                                 <div>
                                     <a
