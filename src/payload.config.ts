@@ -18,6 +18,7 @@ import { Header } from "./globals/Header";
 import { Footer } from "./globals/Footer";
 import { Homepage } from "./globals/Homepage";
 import { License } from "./globals/License";
+import { Adverts } from "./globals/Adverts";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
@@ -34,7 +35,7 @@ export default buildConfig({
         },
     },
     collections: [Users, Media, Posts],
-    globals: [Header, Footer, Homepage, License],
+    globals: [Header, Footer, Homepage, License, Adverts],
     editor: lexicalEditor({
         features: ({ defaultFeatures }) => [
             ...defaultFeatures,

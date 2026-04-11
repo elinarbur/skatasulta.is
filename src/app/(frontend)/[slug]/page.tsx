@@ -58,6 +58,7 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
     }
 
     const header = await payload.findGlobal({ slug: "header" });
+    const adverts = await payload.findGlobal({ slug: "adverts" });
     const posts = await payload.find({
         collection: "posts",
         where: {
@@ -122,6 +123,23 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
                                 </p>
                             </div>
                         </div>
+                    )}
+
+                {adverts.articleBannerTop &&
+                    typeof adverts.articleBannerTop !== "number" &&
+                    typeof adverts.articleBannerTop.url === "string" && (
+                        <a
+                            href="https://docs.google.com/forms/d/e/1FAIpQLSfdZJ26jNIvD-wAv1l1TIy1hMHVWPVJQuqY5uN5rVl_wLCCKQ/viewform"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            <Image
+                                src={adverts.articleBannerTop.url}
+                                alt="Article banner top"
+                                height={adverts.articleBannerTop.height ?? 0}
+                                width={adverts.articleBannerTop.width ?? 0}
+                            />
+                        </a>
                     )}
 
                 {post.type === "article" && post.content && (

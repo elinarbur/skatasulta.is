@@ -94,12 +94,14 @@ export interface Config {
     footer: Footer;
     homepage: Homepage;
     license: License;
+    adverts: Advert;
   };
   globalsSelect: {
     header: HeaderSelect<false> | HeaderSelect<true>;
     footer: FooterSelect<false> | FooterSelect<true>;
     homepage: HomepageSelect<false> | HomepageSelect<true>;
     license: LicenseSelect<false> | LicenseSelect<true>;
+    adverts: AdvertsSelect<false> | AdvertsSelect<true>;
   };
   locale: null;
   widgets: {
@@ -512,6 +514,16 @@ export interface License {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "adverts".
+ */
+export interface Advert {
+  id: number;
+  articleBannerTop?: (number | null) | Media;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "header_select".
  */
 export interface HeaderSelect<T extends boolean = true> {
@@ -551,6 +563,16 @@ export interface HomepageSelect<T extends boolean = true> {
 export interface LicenseSelect<T extends boolean = true> {
   title?: T;
   content?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "adverts_select".
+ */
+export interface AdvertsSelect<T extends boolean = true> {
+  articleBannerTop?: T;
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;
