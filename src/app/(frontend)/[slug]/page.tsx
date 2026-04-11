@@ -130,18 +130,24 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
                     typeof adverts.articleBannerTop.url === "string" && (
                         <div className="mx-auto max-w-screen-md px-8 py-16">
                             <div className="flex max-h-12 justify-center">
-                                <a
-                                    href="https://docs.google.com/forms/d/e/1FAIpQLSfdZJ26jNIvD-wAv1l1TIy1hMHVWPVJQuqY5uN5rVl_wLCCKQ/viewform"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-                                    <Image
-                                        src={adverts.articleBannerTop.url}
-                                        alt="Article banner top"
-                                        height={adverts.articleBannerTop.height ?? 0}
-                                        width={adverts.articleBannerTop.width ?? 0}
-                                    />
-                                </a>
+                                <div>
+                                    <a
+                                        href="https://docs.google.com/forms/d/e/1FAIpQLSfdZJ26jNIvD-wAv1l1TIy1hMHVWPVJQuqY5uN5rVl_wLCCKQ/viewform"
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >
+                                        <Image
+                                            src={adverts.articleBannerTop.url}
+                                            alt="Article banner top"
+                                            height={adverts.articleBannerTop.height ?? 0}
+                                            width={adverts.articleBannerTop.width ?? 0}
+                                        />
+                                    </a>
+
+                                    <p className="mt-1 text-sm font-medium text-gray-500 italic">
+                                        Auglýsing
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     )}
