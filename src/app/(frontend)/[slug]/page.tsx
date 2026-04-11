@@ -128,18 +128,22 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
                 {adverts.articleBannerTop &&
                     typeof adverts.articleBannerTop !== "number" &&
                     typeof adverts.articleBannerTop.url === "string" && (
-                        <a
-                            href="https://docs.google.com/forms/d/e/1FAIpQLSfdZJ26jNIvD-wAv1l1TIy1hMHVWPVJQuqY5uN5rVl_wLCCKQ/viewform"
-                            target="_blank"
-                            rel="noreferrer"
-                        >
-                            <Image
-                                src={adverts.articleBannerTop.url}
-                                alt="Article banner top"
-                                height={adverts.articleBannerTop.height ?? 0}
-                                width={adverts.articleBannerTop.width ?? 0}
-                            />
-                        </a>
+                        <div className="max-w-screen-md px-8 py-16">
+                            <div className="flex max-h-32 justify-center">
+                                <a
+                                    href="https://docs.google.com/forms/d/e/1FAIpQLSfdZJ26jNIvD-wAv1l1TIy1hMHVWPVJQuqY5uN5rVl_wLCCKQ/viewform"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    <Image
+                                        src={adverts.articleBannerTop.url}
+                                        alt="Article banner top"
+                                        height={adverts.articleBannerTop.height ?? 0}
+                                        width={adverts.articleBannerTop.width ?? 0}
+                                    />
+                                </a>
+                            </div>
+                        </div>
                     )}
 
                 {post.type === "article" && post.content && (
