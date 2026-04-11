@@ -146,7 +146,13 @@ export default async function Post({ params }: { params: Promise<{ slug: string 
                                                         : adverts.articleBannerTop.height
                                                     : 0
                                             }
-                                            width={adverts.articleBannerTop.width ?? 0}
+                                            width={
+                                                typeof adverts.articleBannerTop.width === "number"
+                                                    ? adverts.articleBannerTop.width > 480
+                                                        ? 480
+                                                        : adverts.articleBannerTop.width
+                                                    : 0
+                                            }
                                         />
                                     </a>
 
